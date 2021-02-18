@@ -1,1 +1,1 @@
-web: gunicorn todolist-app-django.wsgi --log-file -
+web: gunicorn todo2.wsgi --log-file -
