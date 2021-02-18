@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'tfz7-xn4!2(99pf63nx%v&_3d7u=ny__ptw6eou*7cjufqbok4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1","todolist-app-django.herokuapp.com"]
 

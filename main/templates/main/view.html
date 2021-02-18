@@ -10,8 +10,12 @@ View
             <!-- <p><a href = "/{{td.id}}">{{td.name}}</a></p> -->
             <div class="list-group">
                 <a href="/{{td.id}}" class="list-group-item list-group-item-dark">{{td.name}}</a>
-                <hr class="mt-1 mb-3">
-            </div>    
+                <!-- <button type="button" value = "deletetodo" name = "deletetodo"class="btn btn-danger" style="align-self: right;">Delete</button> -->
+                           
+            </div>
+            <p></p>
+            <hr class="mt-1 mb-3">
+            <p></p>
         {% endfor %}
     {% else %}    
         <p>Login to see your Todo List</p>

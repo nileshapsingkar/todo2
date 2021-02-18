@@ -24,18 +24,21 @@ def index(response, id):
                     ls.item_set.create(text = txt, complete = False)
                 else:
                     print("invalid")
-                #return render(response, "main/view.html", {})
-            # elif response.POST.get("delete"):
-            #     print(ls.item_set.all())
-            #     for item in ls.item.all:
-                    
-            #     return redirect("/view")
+                #return render(response, "main/view.html", {})   
+                return redirect("/view")
+
+            if response.POST.get(ls.name):
+                print(ls.name)
+                ls.delete()
+                return redirect("/view")
+
             for item in ls.item_set.all():
                 if response.POST.get(item.text):
                     item.delete()
                     return redirect("/"+str(id))
                 else:
                     print("invalid")
+            
                 
 
             
@@ -67,6 +70,11 @@ def create(response):
 
 
 def view(response):
+    # todo = ToDoList.objects.get(id = id)   
+    # if response.method == "POST" :
+    #     if response.method.get(id):
+    #         todo.delete()
+    #         return render(response, "main/view.html", {})
     return render(response, "main/view.html", {})
 
 

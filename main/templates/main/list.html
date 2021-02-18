@@ -4,7 +4,10 @@
 {% csrf_token %} 
 {% block content %}
 	<h1>{{ls.name}}</h1>
+	<!-- <button type="submit" name = "{{ls.name}}" value = "{{ls.name}}" class="btn btn-danger">Delete</button> -->
 	<form method="post" action="#">
+		<button type="submit" name = "{{ls.name}}" value = "{{ls.name}}" class="btn btn-danger">Delete</button>
+		<p></p>	
 		{% csrf_token %}
 		{% for item in ls.item_set.all %}
 		<div class="input-group mb-3">
